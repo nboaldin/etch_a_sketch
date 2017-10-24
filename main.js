@@ -12,29 +12,38 @@ let gridNumber = document.getElementById("gridNumber");
 function makeSquareGrid(x) {
   for(i = 0; i < x; i++){
     let col = document.createElement("div");
-    col.className = "grid";
     container.appendChild(col);
 
     for(j = 0; j < x; j++) {
       let cell = document.createElement("div");
       cell.className = "grid cell";
       col.appendChild(cell);
-      cell.style.display = "inline-block";
+      // cell.style.display = "inline-block";
+
     }
   }
 }
 
+
+
 function fillCells() {
-
+  let cellFill = document.querySelectorAll(".cell");
+  cellFill.forEach(function(element){
+    element.onmouseover = function() {
+      element.style.background = "red";
+    }
+  });
 }
 
 
 
-makeSquareGrid(16);
 
-function clearGrid() {
+makeSquareGrid(64);
+fillCells();
 
-}
+
+
+
 
 
 

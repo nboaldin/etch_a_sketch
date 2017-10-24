@@ -8,12 +8,8 @@
 .grid {
   margin: 0;
   padding: 0;
-  height: 40px;
-  width: 40px;
+  height: 10px;
+  width: 10px;
   outline: 1px solid black;
   border: none;
-}
-
-.cell:hover {
-  background-color: red;
 }
